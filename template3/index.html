@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Dentista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--HEADER-->
+<header>
+  <h1>Consultório Odontológico</h1>
+  <p>Transforme o sorriso de seus pacientes com atendimento de qualidade</p>
+  <button onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Agende Agora</button>
+</header>
+
+<!--ABOUT-->
+<section class="sobre">
+  <h2>Sobre</h2>
+  <p>Nosso consultório odontológico oferece atendimento especializado, técnicas modernas e uma experiência acolhedora para todos os pacientes.</p>
+</section>
+
+<!--SERVICES-->
+<section class="servicos">
+  <h2>Serviços</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Clareamento Dental</h3>
+      <p>Procedimento seguro e eficaz para um sorriso mais branco.</p>
+      <p>R$150,00</p>
+    </div>
+    <div class="card">
+      <h3>Ortodontia</h3>
+      <p>Aparelhos modernos para alinhar os dentes com conforto.</p>
+      <p>R$250,00</p>
+    </div>
+    <div class="card">
+      <h3>Implantes</h3>
+      <p>Recupere dentes perdidos com soluções duradouras.</p>
+      <p>R$350,00</p>
+    </div>
+  </div>
+</section>
+
+<!--COMENTS-->
+<section class="depoimentos">
+  <h2>Depoimentos</h2>
+  <div class="cards">
+    <div class="depoimento">
+      <p>"Melhor atendimento odontológico que já tive!"</p>
+      <h4>Paciente Satisfeito</h4>
+    </div>
+    <div class="depoimento">
+      <p>"Equipe super profissional e ambiente acolhedor."</p>
+      <h4>Paciente Feliz</h4>
+    </div>
+  </div>
+</section>
+
+<!--CONTACT-->
+<section class="contato" id="contato">
+  <h2>Contato / Agendamento</h2>
+  <form id="form-contato">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+    <button type="submit" class="submit">Enviar Mensagem</button>
+  </form>
+</section>
+
+<!--FOOTER-->
+<footer>
+  <p>Endereço: Rua Do Lado, 123 | São Paulo | SP</p>
+  <p>Horário de atendimento: Seg-Sex 9h-18h</p>
+  <p>Contatos: <a href="mailto:email@exemplo.com">beltrano@ciclano.com</a> | <a href="tel:+550000000000">+55 11 91234-5678</a></p>
+</footer>
+
+<script>
+  const form = document.getElementById('form-contato');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Mensagem enviada! (Integração EmailJS ou outro serviço pode ser adicionada)');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

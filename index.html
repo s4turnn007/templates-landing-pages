@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Templates Landing Pages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg,#e3b3f1,#873a9e,#200229);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr; /* padrão mobile */
+    }
+
+    @media(min-width: 900px) {
+      .container {
+        grid-template-columns: 1fr 1fr; /* 2 colunas desktop */
+      }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      flex: 1;
+    }
+
+    .card-content h2 {
+      margin-bottom: 0.75rem;
+      font-size: 1.3rem;
+      color: #873a9e;
+    }
+
+    .card-content p {
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .btn {
+      display: inline-block;
+      background: #873a9e;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #200229;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(90deg,#e3b3f1,#873a9e);
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfólio de Templates</h1>
+    <p>Landing Pages profissionais para diferentes nichos de negócios</p>
+  </header>
+
+  <main class="container">
+    <!-- Template 1 -->
+    <div class="card">
+      <img src="./images/generico-1.png" alt="Template Geral">
+      <div class="card-content">
+        <h2>Template Geral</h2>
+        <p>Modelo de landing page versátil, ideal para empresas de diversos segmentos. Simples, responsivo e direto ao ponto.</p>
+        <a href="./template1/index.html" class="btn" target="_blank">Ver Demo</a>
+      </div>
+    </div>
+
+    <!-- Template 2 -->
+    <div class="card">
+      <img src="./images/generico-2.png" alt="Template Psicologia">
+      <div class="card-content">
+        <h2>Template Psicologia</h2>
+        <p>Landing page responsiva, ideal para profissionais da psicologia. Acolhedora, prática e informativa.</p>
+        <a href="./template2/index.html" class="btn" target="_blank">Ver Demo</a>
+      </div>
+    </div>
+
+    <!-- Template 3 -->
+    <div class="card">
+      <img src="./images/generico-3.png" alt="Template Dentista">
+      <div class="card-content">
+        <h2>Template Dentista</h2>
+        <p>Landing page projetada para consultórios odontológicos, com foco em serviços, agendamento e contato rápido.</p>
+        <a href="./template3/index.html" class="btn" target="_blank">Ver Demo</a>
+      </div>
+    </div>
+
+    <!-- Template 4 -->
+    <div class="card">
+      <img src="./images/generico-4.png" alt="Template Advogado">
+      <div class="card-content">
+        <h2>Template Advogado</h2>
+        <p>Landing page sóbria e profissional, ideal para escritórios de advocacia e profissionais autônomos da área jurídica.</p>
+        <a href="./template4/index.html" class="btn" target="_blank">Ver Demo</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 - Desenvolvido por Stéfanie Carvalho</p>
+  </footer>
+</body>
+</html>

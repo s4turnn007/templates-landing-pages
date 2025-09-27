@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Advogados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Escritório Jurídico</h1>
+  <p>Profissionalismo e segurança jurídica para você e sua empresa</p>
+  <button onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Agende Agora</button>
+</header>
+
+<section class="sobre">
+  <h2>Sobre</h2>
+  <p>Nossa equipe de advogados especializados atua em diversas áreas do Direito, garantindo atendimento personalizado e soluções eficientes.</p>
+</section>
+
+<section class="servicos">
+  <h2>Serviços</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Consultoria Jurídica</h3>
+      <p>Orientação profissional para empresas e indivíduos.</p>
+      <p>R$100,00</p>
+    </div>
+    <div class="card">
+      <h3>Direito Trabalhista</h3>
+      <p>Atendimento completo em questões trabalhistas.</p>
+      <p>R$150,00</p>
+    </div>
+    <div class="card">
+      <h3>Direito Civil</h3>
+      <p>Resolução de casos civis com eficiência e ética.</p>
+      <p>R$200,00</p>
+    </div>
+  </div>
+</section>
+
+<section class="depoimentos">
+  <h2>Depoimentos</h2>
+  <div class="cards">
+    <div class="depoimento">
+      <p>"Profissionais competentes e super confiáveis!"</p>
+      <h4>Cliente Satisfeito</h4>
+    </div>
+    <div class="depoimento">
+      <p>"Atendimento impecável e transparente."</p>
+      <h4>Cliente Feliz</h4>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <h2>Contato / Agendamento</h2>
+  <form id="form-contato">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+    <button type="submit" class="submit">Enviar Mensagem</button>
+  </form>
+</section>
+
+<footer>
+  <p>Endereço: Rua De Cima, 456 | São Paulo | SP</p>
+  <p>Horário de atendimento: Seg-Sex 9h-18h</p>
+  <p>Contatos: <a href="mailto:beltrano@ciclano.com">escritorio@advogados.com</a> | <a href="tel:+5511912345678">+55 11 91234-5678</a></p>
+</footer>
+
+<script>
+    const form = document.getElementById('form-contato');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Mensagem enviada! (Integração EmailJS ou outro serviço pode ser adicionada)');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
